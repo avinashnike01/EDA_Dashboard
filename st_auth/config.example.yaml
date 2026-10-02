@@ -1,0 +1,15 @@
+# Copy this file to st_auth/config.yaml and fill in your own values.
+# config.yaml is gitignored; never commit it.
+credentials:
+  usernames:
+    demo_user:
+      email: demo_user@example.com
+      name: Demo User
+      password: "<bcrypt hash, not the plain password>"
+cookie:
+  name: eda_dashboard_auth
+  key: "<long random string, e.g. python -c \"import secrets; print(secrets.token_hex(32))\">"
+  expiry_days: 30
+pre-authorized:
+  emails:
+    - someone@example.com
